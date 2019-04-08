@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>We Love Idol</title>
+  <link rel="icon" type="image/icon" href="icon.png" />
+  
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
+
+  <!-- CSS -->
+  <link href="style.css" rel="stylesheet">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    <script>
+    $(document).ready(function(){
+      $("img").mouseover(function(){
+        $("img").css("transform", "scale(1.1)")
+        $(".intro-text").css("display", "none")
+      });
+      $("img").mouseout(function(){
+        $("img").css("transform", "scale(1)")
+        $(".intro-text").css("display", "inline")
+      });
+    });
+    </script>
+
+<script type="text/javascript">
+  var idleTime = 0;
+  $(document).ready(function () {
+      //Increment the idle time counter every minute.
+      var idleInterval = setInterval(timerIncrement, 60000); // 1 minute
+  
+      //Zero the idle timer on mouse movement.
+      $(this).mousemove(function (e) {
+          idleTime = 0;
+      });
+      $(this).keypress(function (e) {
+          idleTime = 0;
+      });
+  });
+  
+  function timerIncrement() {
+      idleTime = idleTime + 1;
+      if (idleTime > 5) { // 5 minutes
+          window.alert("Hello there! Are you okay?");
+          window.location.reload();
+      }
+  }
+  </script>
+    
+</head>
+
+<body>
+
+  <h1 class="site-heading text-center text-white d-none d-lg-block">
+    <img src="heads.png" alt="head" href="#" style="width:800px;height:200px;">
+  </h1>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light py-lg-4" id="mainNav">
+    <div class="container">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item active px-lg-4">
+            <a class="nav-link text-uppercase text-expanded" href="#">Home</a>
+          </li>
+          <li class="nav-item px-lg-4">
+            <a class="nav-link text-uppercase text-expanded" href="#">Agency</a>
+          </li>
+          <li class="nav-item px-lg-4">
+            <a class="nav-link text-uppercase text-expanded" href="#">All Idol</a>
+          </li>
+          <li class="nav-item px-lg-4">
+            <a class="nav-link text-uppercase text-expanded" href="#">About</a>
+          </li>
+        </ul>
+    </div>
+  </nav>
+
+  <div class="row">
+  <div class="column">
+    <img src="Logo/48 Family.png" alt="48" href="" style="width:320px;height:200px;">
+  </div>
+  
+  <div class="column">
+    <img src="Logo/Helloproject.jpg" alt="hp" href="" style="width:320px;height:200px;">
+  </div>
+  
+  <div class="column">
+    <img src="Logo/Idol Street.jpg" alt="street" href="" style="width:320px;height:200px;">
+  </div>
+
+</body>
+
+</html>
